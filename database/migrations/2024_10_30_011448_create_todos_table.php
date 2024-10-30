@@ -13,8 +13,8 @@ return new class extends Migration {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
-            $table->string('title');
-            $table->string('body');
+            $table->string('taskName');
+            $table->string('taskBody');
             $table->timestamps();
         });
     }
